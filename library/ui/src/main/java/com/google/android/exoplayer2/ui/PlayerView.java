@@ -22,6 +22,7 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
@@ -432,6 +433,7 @@ public class PlayerView extends FrameLayout implements AdsLoader.AdViewProvider 
           break;
       }
       surfaceView.setLayoutParams(params);
+      surfaceView.setBackgroundColor(Color.YELLOW);
       contentFrame.addView(surfaceView, 0);
     } else {
       surfaceView = null;
