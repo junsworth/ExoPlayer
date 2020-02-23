@@ -1525,6 +1525,12 @@ public class PlayerView extends FrameLayout implements AdsLoader.AdViewProvider 
       }
     }
 
+    public void setShutterViewVisibility(int visibility) {
+      if (shutterView != null) {
+        shutterView.setVisibility(visibility);
+      }
+    }
+
     @Override
     public void onTracksChanged(TrackGroupArray tracks, TrackSelectionArray selections) {
       updateForCurrentTrackSelections(/* isNewPlayer= */ false);
