@@ -18,7 +18,6 @@
   <com.google.android.exoplayer2.ui.AspectRatioFrameLayout android:id="@id/exo_content_frame"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:background="@android:color/holo_blue_bright"
       android:layout_gravity="center">
 
     <!-- Video surface will be inserted as the first child of the content frame. -->
@@ -26,18 +25,16 @@
     <View android:id="@id/exo_shutter"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/holo_red_dark"/>
+        android:background="@android:color/holo_green_dark"/>
 
     <ImageView android:id="@id/exo_artwork"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/holo_red_dark"
         android:scaleType="fitXY"/>
 
     <com.google.android.exoplayer2.ui.SubtitleView android:id="@id/exo_subtitles"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@android:color/holo_red_dark"/>
+        android:layout_height="match_parent"/>
 
     <ProgressBar android:id="@id/exo_buffering"
         android:layout_width="wrap_content"
@@ -50,24 +47,21 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:gravity="center"
-        android:background="@android:color/holo_blue_dark"
+        android:background="@color/exo_error_message_background_color"
         android:padding="16dp"/>
 
   </com.google.android.exoplayer2.ui.AspectRatioFrameLayout>
 
   <FrameLayout android:id="@id/exo_ad_overlay"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/holo_red_dark"/>
+    android:layout_height="match_parent"/>
 
   <FrameLayout android:id="@id/exo_overlay"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:background="@android:color/holo_red_dark"/>
+      android:layout_height="match_parent"/>
 
   <View android:id="@id/exo_controller_placeholder"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:background="@android:color/holo_red_dark"/>
+      android:layout_height="match_parent"/>
 
 </merge>
