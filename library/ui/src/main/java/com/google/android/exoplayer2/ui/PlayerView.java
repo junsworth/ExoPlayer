@@ -720,6 +720,17 @@ public class PlayerView extends FrameLayout implements AdsLoader.AdViewProvider 
   }
 
   /**
+   * Sets the visibility status of the {@code exo_shutter} view.
+   *
+   * @param visibility The visibility flag.
+   */
+  public void setShutterVisibility(int visibility) {
+    if (shutterView != null) {
+      shutterView.setVisibility(visibility);
+    }
+  }
+
+  /**
    * Sets whether the currently displayed video frame or media artwork is kept visible when the
    * player is reset. A player reset is defined to mean the player being re-prepared with different
    * media, the player transitioning to unprepared media, {@link Player#stop(boolean)} being called
@@ -1522,12 +1533,6 @@ public class PlayerView extends FrameLayout implements AdsLoader.AdViewProvider 
     public void onRenderedFirstFrame() {
       if (shutterView != null) {
         shutterView.setVisibility(INVISIBLE);
-      }
-    }
-
-    public void setShutterViewVisibility(int visibility) {
-      if (shutterView != null) {
-        shutterView.setVisibility(visibility);
       }
     }
 
