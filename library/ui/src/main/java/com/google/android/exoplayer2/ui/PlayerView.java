@@ -24,6 +24,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Matrix;
+import android.graphics.PixelFormat;
 import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -32,6 +33,7 @@ import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
+import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.TextureView;
 import android.view.View;
@@ -434,6 +436,9 @@ public class PlayerView extends FrameLayout implements AdsLoader.AdViewProvider 
         default:
           System.out.println("SURFACE_TYPE_SURFACE_VIEW");
           surfaceView = new SurfaceView(context);
+          ((SurfaceView) surfaceView).setZOrderOnTop(true);
+          SurfaceHolder surfaceHolder = ((SurfaceView) surfaceView).getHolder();
+          surfaceHolder.setFormat(PixelFormat.TRANSPARENT);
           break;
       }
       surfaceView.setLayoutParams(params);
