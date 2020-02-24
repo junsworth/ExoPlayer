@@ -418,22 +418,26 @@ public class PlayerView extends FrameLayout implements AdsLoader.AdViewProvider 
               ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
       switch (surfaceType) {
         case SURFACE_TYPE_TEXTURE_VIEW:
+          System.out.println("SURFACE_TYPE_TEXTURE_VIEW");
           surfaceView = new TextureView(context);
           break;
         case SURFACE_TYPE_SPHERICAL_GL_SURFACE_VIEW:
+          System.out.println("SURFACE_TYPE_SPHERICAL_GL_SURFACE_VIEW");
           SphericalGLSurfaceView sphericalGLSurfaceView = new SphericalGLSurfaceView(context);
           sphericalGLSurfaceView.setSingleTapListener(componentListener);
           surfaceView = sphericalGLSurfaceView;
           break;
         case SURFACE_TYPE_VIDEO_DECODER_GL_SURFACE_VIEW:
+          System.out.println("SURFACE_TYPE_VIDEO_DECODER_GL_SURFACE_VIEW");
           surfaceView = new VideoDecoderGLSurfaceView(context);
           break;
         default:
+          System.out.println("SURFACE_TYPE_SURFACE_VIEW");
           surfaceView = new SurfaceView(context);
           break;
       }
       surfaceView.setLayoutParams(params);
-//      surfaceView.setBackgroundColor(Color.YELLOW);
+      surfaceView.setBackgroundColor(Color.TRANSPARENT);
       contentFrame.setBackgroundColor(Color.RED);
       contentFrame.addView(surfaceView, 0);
     } else {
