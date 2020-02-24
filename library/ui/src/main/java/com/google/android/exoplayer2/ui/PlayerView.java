@@ -442,8 +442,6 @@ public class PlayerView extends FrameLayout implements AdsLoader.AdViewProvider 
           break;
       }
       surfaceView.setLayoutParams(params);
-      surfaceView.setBackgroundColor(Color.TRANSPARENT);
-      contentFrame.setBackgroundColor(Color.RED);
       contentFrame.addView(surfaceView, 0);
     } else {
       surfaceView = null;
